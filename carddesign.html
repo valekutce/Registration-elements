@@ -1,0 +1,147 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>card design</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        /* background-color: #8EC5FC;
+background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%); */
+
+        background: linear-gradient(to right , orangered ,rgb(241, 161, 13));
+    }
+    .container{
+        display: grid;
+        grid-template-areas: 
+        'navbar navbar navbar navbar'
+        'lefted lefted righted righted'
+        ;
+        grid-gap: 1rem;
+        margin: 100px 100px;
+        margin-bottom: 0;
+    }
+    .item{
+      
+        padding: 10px;
+    
+        /* border: 2px solid black; */
+    }
+    #navbar{
+        grid-area: navbar;
+    }
+    #lefted{
+        grid-area: lefted;
+        
+    }
+    #righted{
+        grid-area: righted;
+    }
+    .textbox{
+        margin-top: 20%;
+        color: rgb(255, 255, 255);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .textbox p{
+margin: 0 100px;
+text-align: justify;
+/* background-color: black; */
+    }
+    .form{
+        background-color: rgb(255, 255, 255);
+        width: 450px;
+        height: 450px;
+        border-bottom-left-radius: 10% 50%;
+        border-top-left-radius: 10% 50%;
+    
+        
+    }
+    input{
+      width: 400px;
+      height: 40px;
+      margin: 10px 40 ;
+      padding: 10px 20px;
+        border-radius: 7px;
+        
+        border: 2px solid rgb(139, 139, 139);
+        outline-color: rgb(13, 163, 163);
+        
+    }
+  .form h1{
+        color: rgb(65, 63, 63);
+       text-align: center;
+       padding: 35px;
+        
+    }
+    img{
+        animation: moved ease .9s infinite alternate;
+        cursor: pointer;
+    }
+    @keyframes moved {
+        0%{
+            transform: translateY(0);
+        }
+        100%{
+            transform: translateY(-20px);
+        }
+    }
+    button {
+        color: white;
+        padding: 10px 40px ;
+        margin: 30px 0px;
+        margin-left: 300px;
+        background-color: rgb(255, 72, 0);
+        border: none;
+        border-radius: 20px;
+        outline: none;
+        cursor: pointer;
+    }
+    .btn
+    {
+        margin-left: 0px;
+        cursor: pointer;
+        color: black;
+        background-color: white;
+    }
+    button:hover{
+        transition: .5s;
+        background-color: black;
+        color: white;
+    }
+</style>
+<body>
+    <div class="container">
+        <div id="navbar" class="item">
+
+        </div>
+        <div id="lefted" class="item">
+                <section class="textbox">
+                    <img src="./arrow1.png" width="100px" alt="">
+                    <h1>Join US</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium cum quisquam non quasi natus. Libero </p>
+                <button class="btn">click me</button>
+                </section>
+        </div>
+        <div id="righted" class="item">
+<div class="form">
+    <h1>Registration</h1>
+    <input type="text" placeholder="Name"> <br>
+    <input type="text" placeholder="Username"> <br>
+    <input type="text" placeholder="E-mail">
+    <br>
+    <input type="text" placeholder="Password">
+    <button>Submit</button>
+</div>
+        </div>
+    </div>
+</body>
+</html>
